@@ -33,7 +33,9 @@ and is ready to use. By default **F1** will open or close in-game menu.
 
 | Feature | Description |
 | --- | --- |
-|Camera Control| Freeze camera position & rotation. Freely move and rotate camera with keyboard hotkeys. Change FOV|
+|Camera Control| Freeze camera position & rotation. Freely move and rotate camera with keyboard hotkeys. Change FOV.|
+
+**NOTE: All camera changes are relative to P1 and P2 for now.**
 
 
 
