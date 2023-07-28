@@ -13,20 +13,26 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\imgui">
-      <UniqueIdentifier>{7a4f9b3c-4f10-449c-acea-8412c81da20f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\kiero">
-      <UniqueIdentifier>{c502f1ca-f705-4434-9de7-4151c958f0d8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\kiero\minhook">
-      <UniqueIdentifier>{eff10881-cedc-42a5-a857-c9e5c8a9db3b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\code">
-      <UniqueIdentifier>{252efee4-26b2-4912-9202-0d737da1a96e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\utils">
       <UniqueIdentifier>{54fb54c5-dd05-444f-874a-a37a4fa220b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui">
+      <UniqueIdentifier>{3b486c56-4ed8-4c5b-8435-427ce946dba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\minhook">
+      <UniqueIdentifier>{12487770-9dfe-4b00-aabf-5263fb6ecee5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gui\imgui">
+      <UniqueIdentifier>{187f6991-fbc1-4dc3-9335-d2defcd1baac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\plugin">
+      <UniqueIdentifier>{3b7b82ba-338e-4e09-932d-fddd0eb860a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\umvc3">
+      <UniqueIdentifier>{d5140f0a-c851-4b06-a6cc-3c58b7998b72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\helper">
+      <UniqueIdentifier>{fd541d81-a23a-42d6-b4e3-36284ad3d942}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -36,79 +42,76 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="imgui\imconfig.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_dx9.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_win32.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imgui_internal.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imstb_rectpack.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imstb_textedit.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="imgui\imstb_truetype.h">
-      <Filter>Header Files\imgui</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\kiero.h">
-      <Filter>Header Files\kiero</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\minhook\src\buffer.h">
-      <Filter>Header Files\kiero\minhook</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\minhook\src\trampoline.h">
-      <Filter>Header Files\kiero\minhook</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\minhook\src\hde\hde32.h">
-      <Filter>Header Files\kiero\minhook</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\minhook\src\hde\hde64.h">
-      <Filter>Header Files\kiero\minhook</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\minhook\src\hde\pstdint.h">
-      <Filter>Header Files\kiero\minhook</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\minhook\src\hde\table32.h">
-      <Filter>Header Files\kiero\minhook</Filter>
-    </ClInclude>
-    <ClInclude Include="kiero\minhook\src\hde\table64.h">
-      <Filter>Header Files\kiero\minhook</Filter>
-    </ClInclude>
-    <ClInclude Include="code\umvc3.h">
-      <Filter>Header Files\code</Filter>
-    </ClInclude>
-    <ClInclude Include="code\eNotifManager.h">
-      <Filter>Header Files\code</Filter>
-    </ClInclude>
-    <ClInclude Include="code\eSettingsManager.h">
-      <Filter>Header Files\code</Filter>
-    </ClInclude>
-    <ClInclude Include="code\mk10utils.h">
-      <Filter>Header Files\code</Filter>
-    </ClInclude>
-    <ClInclude Include="IniReader.h">
+    <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="code\umvc3menu.h">
-      <Filter>Header Files\code</Filter>
+    <ClInclude Include="gui\dx9hook.h">
+      <Filter>Header Files\gui</Filter>
     </ClInclude>
-    <ClInclude Include="utils\DelimStringReader.h">
+    <ClInclude Include="minhook\src\buffer.h">
+      <Filter>Header Files\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\trampoline.h">
+      <Filter>Header Files\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\hde32.h">
+      <Filter>Header Files\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\hde64.h">
+      <Filter>Header Files\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\pstdint.h">
+      <Filter>Header Files\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\table32.h">
+      <Filter>Header Files\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="minhook\src\hde\table64.h">
+      <Filter>Header Files\minhook</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\log.h">
+      <Filter>Header Files\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\gui_impl_dx9.h">
+      <Filter>Header Files\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imconfig.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imgui.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imgui_impl_dx9.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imgui_impl_win32.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imgui_internal.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imstb_rectpack.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imstb_textedit.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\imgui\imstb_truetype.h">
+      <Filter>Header Files\gui\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\font.h">
+      <Filter>Header Files\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\addr.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="utils\HookInit.hpp">
+    <ClInclude Include="utils\core.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="utils\LateStaticInit.h">
+    <ClInclude Include="utils\IniReader.h">
+      <Filter>Header Files\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\MemoryMgr.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
     <ClInclude Include="utils\Patterns.h">
@@ -117,17 +120,29 @@
     <ClInclude Include="utils\Trampoline.h">
       <Filter>Header Files\utils</Filter>
     </ClInclude>
-    <ClInclude Include="code\UMVC3Camera.h">
-      <Filter>Header Files\code</Filter>
+    <ClInclude Include="plugin\Menu.h">
+      <Filter>Header Files\plugin</Filter>
     </ClInclude>
-    <ClInclude Include="imgui\imgui_impl_dx11.h">
-      <Filter>Header Files\imgui</Filter>
+    <ClInclude Include="umvc3\Vector.h">
+      <Filter>Header Files\umvc3</Filter>
     </ClInclude>
-    <ClInclude Include="resource.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="plugin\Settings.h">
+      <Filter>Header Files\plugin</Filter>
     </ClInclude>
-    <ClInclude Include="resource1.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="helper\eKeyboardMan.h">
+      <Filter>Header Files\helper</Filter>
+    </ClInclude>
+    <ClInclude Include="umvc3\Matrix.h">
+      <Filter>Header Files\umvc3</Filter>
+    </ClInclude>
+    <ClInclude Include="umvc3\Camera.h">
+      <Filter>Header Files\umvc3</Filter>
+    </ClInclude>
+    <ClInclude Include="plugin\Hooks.h">
+      <Filter>Header Files\plugin</Filter>
+    </ClInclude>
+    <ClInclude Include="gui\notifications.h">
+      <Filter>Header Files\gui</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -137,71 +152,83 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="minhook\src\buffer.c">
+      <Filter>Header Files\minhook</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui_demo.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="minhook\src\hook.c">
+      <Filter>Header Files\minhook</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui_draw.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="minhook\src\trampoline.c">
+      <Filter>Header Files\minhook</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui_impl_dx9.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="minhook\src\hde\hde32.c">
+      <Filter>Header Files\minhook</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui_impl_win32.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="minhook\src\hde\hde64.c">
+      <Filter>Header Files\minhook</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui_widgets.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="gui\log.cpp">
+      <Filter>Header Files\gui</Filter>
     </ClCompile>
-    <ClCompile Include="kiero\kiero.cpp">
-      <Filter>Header Files\kiero</Filter>
+    <ClCompile Include="gui\dx9hook.cpp">
+      <Filter>Header Files\gui</Filter>
     </ClCompile>
-    <ClCompile Include="kiero\minhook\src\buffer.c">
-      <Filter>Header Files\kiero\minhook</Filter>
+    <ClCompile Include="gui\imgui\imgui.cpp">
+      <Filter>Header Files\gui\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="kiero\minhook\src\hook.c">
-      <Filter>Header Files\kiero\minhook</Filter>
+    <ClCompile Include="gui\imgui\imgui_demo.cpp">
+      <Filter>Header Files\gui\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="kiero\minhook\src\trampoline.c">
-      <Filter>Header Files\kiero\minhook</Filter>
+    <ClCompile Include="gui\imgui\imgui_draw.cpp">
+      <Filter>Header Files\gui\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="kiero\minhook\src\hde\hde32.c">
-      <Filter>Header Files\kiero\minhook</Filter>
+    <ClCompile Include="gui\imgui\imgui_impl_dx9.cpp">
+      <Filter>Header Files\gui\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="kiero\minhook\src\hde\hde64.c">
-      <Filter>Header Files\kiero\minhook</Filter>
+    <ClCompile Include="gui\imgui\imgui_impl_win32.cpp">
+      <Filter>Header Files\gui\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="code\eNotifManager.cpp">
-      <Filter>Header Files\code</Filter>
+    <ClCompile Include="gui\imgui\imgui_tables.cpp">
+      <Filter>Header Files\gui\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="code\eSettingsManager.cpp">
-      <Filter>Header Files\code</Filter>
+    <ClCompile Include="gui\imgui\imgui_widgets.cpp">
+      <Filter>Header Files\gui\imgui</Filter>
     </ClCompile>
-    <ClCompile Include="code\mk10utils.cpp">
-      <Filter>Header Files\code</Filter>
+    <ClCompile Include="gui\gui_impl_dx9.cpp">
+      <Filter>Header Files\gui</Filter>
     </ClCompile>
-    <ClCompile Include="IniReader.cpp">
-      <Filter>Header Files</Filter>
+    <ClCompile Include="utils\addr.cpp">
+      <Filter>Header Files\utils</Filter>
     </ClCompile>
-    <ClCompile Include="code\umvc3menu.cpp">
-      <Filter>Header Files\code</Filter>
-    </ClCompile>
-    <ClCompile Include="code\umvc3.cpp">
-      <Filter>Header Files\code</Filter>
+    <ClCompile Include="utils\IniReader.cpp">
+      <Filter>Header Files\utils</Filter>
     </ClCompile>
     <ClCompile Include="utils\Patterns.cpp">
       <Filter>Header Files\utils</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="plugin\Menu.cpp">
+      <Filter>Header Files\plugin</Filter>
     </ClCompile>
-    <ClCompile Include="imgui\imgui_tables.cpp">
-      <Filter>Header Files\imgui</Filter>
+    <ClCompile Include="helper\eKeyboardMan.cpp">
+      <Filter>Header Files\helper</Filter>
     </ClCompile>
-    <ClCompile Include="code\UMVC3Camera.cpp">
-      <Filter>Header Files\code</Filter>
+    <ClCompile Include="umvc3\Matrix.cpp">
+      <Filter>Header Files\umvc3</Filter>
+    </ClCompile>
+    <ClCompile Include="umvc3\Camera.cpp">
+      <Filter>Header Files\umvc3</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\Hooks.cpp">
+      <Filter>Header Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="plugin\Settings.cpp">
+      <Filter>Header Files\plugin</Filter>
+    </ClCompile>
+    <ClCompile Include="umvc3\Vector.cpp">
+      <Filter>Header Files\umvc3</Filter>
+    </ClCompile>
+    <ClCompile Include="gui\notifications.cpp">
+      <Filter>Header Files\gui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

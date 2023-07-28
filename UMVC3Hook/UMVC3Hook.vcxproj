@@ -23,32 +23,32 @@
     <ProjectGuid>{8539F2F2-70DC-453A-9A80-1D41AE524A59}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>UMVC3Hook</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -72,12 +72,15 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
+    <TargetExt>.asi</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -90,8 +93,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;UMVC3HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -101,13 +105,14 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;UMVC3HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_DEBUG;UMVC3HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -124,8 +129,9 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;UMVC3HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -146,7 +152,7 @@
       <PreprocessorDefinitions>NDEBUG;_CRT_SECURE_NO_WARNINGS;UMVC3HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard>stdcpp20</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -157,69 +163,76 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="code\eNotifManager.h" />
-    <ClInclude Include="code\eSettingsManager.h" />
-    <ClInclude Include="code\mk10utils.h" />
-    <ClInclude Include="code\umvc3.h" />
-    <ClInclude Include="code\UMVC3Camera.h" />
-    <ClInclude Include="code\umvc3menu.h" />
     <ClInclude Include="framework.h" />
-    <ClInclude Include="imgui\imconfig.h" />
-    <ClInclude Include="imgui\imgui.h" />
-    <ClInclude Include="imgui\imgui_impl_dx11.h" />
-    <ClInclude Include="imgui\imgui_impl_dx9.h" />
-    <ClInclude Include="imgui\imgui_impl_win32.h" />
-    <ClInclude Include="imgui\imgui_internal.h" />
-    <ClInclude Include="imgui\imstb_rectpack.h" />
-    <ClInclude Include="imgui\imstb_textedit.h" />
-    <ClInclude Include="imgui\imstb_truetype.h" />
-    <ClInclude Include="IniReader.h" />
-    <ClInclude Include="kiero\kiero.h" />
-    <ClInclude Include="kiero\minhook\src\buffer.h" />
-    <ClInclude Include="kiero\minhook\src\hde\hde32.h" />
-    <ClInclude Include="kiero\minhook\src\hde\hde64.h" />
-    <ClInclude Include="kiero\minhook\src\hde\pstdint.h" />
-    <ClInclude Include="kiero\minhook\src\hde\table32.h" />
-    <ClInclude Include="kiero\minhook\src\hde\table64.h" />
-    <ClInclude Include="kiero\minhook\src\trampoline.h" />
+    <ClInclude Include="gui\dx9hook.h" />
+    <ClInclude Include="gui\font.h" />
+    <ClInclude Include="gui\gui_impl_dx9.h" />
+    <ClInclude Include="gui\imgui\imconfig.h" />
+    <ClInclude Include="gui\imgui\imgui.h" />
+    <ClInclude Include="gui\imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="gui\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="gui\imgui\imgui_internal.h" />
+    <ClInclude Include="gui\imgui\imstb_rectpack.h" />
+    <ClInclude Include="gui\imgui\imstb_textedit.h" />
+    <ClInclude Include="gui\imgui\imstb_truetype.h" />
+    <ClInclude Include="gui\log.h" />
+    <ClInclude Include="gui\notifications.h" />
+    <ClInclude Include="helper\eKeyboardMan.h" />
+    <ClInclude Include="minhook\src\buffer.h" />
+    <ClInclude Include="minhook\src\hde\hde32.h" />
+    <ClInclude Include="minhook\src\hde\hde64.h" />
+    <ClInclude Include="minhook\src\hde\pstdint.h" />
+    <ClInclude Include="minhook\src\hde\table32.h" />
+    <ClInclude Include="minhook\src\hde\table64.h" />
+    <ClInclude Include="minhook\src\trampoline.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="plugin\Hooks.h" />
+    <ClInclude Include="plugin\Menu.h" />
+    <ClInclude Include="plugin\Settings.h" />
     <ClInclude Include="resource.h" />
-    <ClInclude Include="resource1.h" />
-    <ClInclude Include="utils\DelimStringReader.h" />
-    <ClInclude Include="utils\HookInit.hpp" />
-    <ClInclude Include="utils\LateStaticInit.h" />
+    <ClInclude Include="umvc3\Camera.h" />
+    <ClInclude Include="umvc3\Matrix.h" />
+    <ClInclude Include="umvc3\Vector.h" />
+    <ClInclude Include="utils\addr.h" />
+    <ClInclude Include="utils\core.h" />
+    <ClInclude Include="utils\IniReader.h" />
+    <ClInclude Include="utils\MemoryMgr.h" />
     <ClInclude Include="utils\Patterns.h" />
     <ClInclude Include="utils\Trampoline.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="code\eNotifManager.cpp" />
-    <ClCompile Include="code\eSettingsManager.cpp" />
-    <ClCompile Include="code\mk10utils.cpp" />
-    <ClCompile Include="code\umvc3.cpp" />
-    <ClCompile Include="code\UMVC3Camera.cpp" />
-    <ClCompile Include="code\umvc3menu.cpp" />
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="imgui\imgui.cpp" />
-    <ClCompile Include="imgui\imgui_demo.cpp" />
-    <ClCompile Include="imgui\imgui_draw.cpp" />
-    <ClCompile Include="imgui\imgui_impl_dx11.cpp" />
-    <ClCompile Include="imgui\imgui_impl_dx9.cpp" />
-    <ClCompile Include="imgui\imgui_impl_win32.cpp" />
-    <ClCompile Include="imgui\imgui_tables.cpp" />
-    <ClCompile Include="imgui\imgui_widgets.cpp" />
-    <ClCompile Include="IniReader.cpp" />
-    <ClCompile Include="kiero\kiero.cpp" />
-    <ClCompile Include="kiero\minhook\src\buffer.c" />
-    <ClCompile Include="kiero\minhook\src\hde\hde32.c" />
-    <ClCompile Include="kiero\minhook\src\hde\hde64.c" />
-    <ClCompile Include="kiero\minhook\src\hook.c" />
-    <ClCompile Include="kiero\minhook\src\trampoline.c" />
+    <ClCompile Include="gui\dx9hook.cpp" />
+    <ClCompile Include="gui\gui_impl_dx9.cpp" />
+    <ClCompile Include="gui\imgui\imgui.cpp" />
+    <ClCompile Include="gui\imgui\imgui_demo.cpp" />
+    <ClCompile Include="gui\imgui\imgui_draw.cpp" />
+    <ClCompile Include="gui\imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="gui\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="gui\imgui\imgui_tables.cpp" />
+    <ClCompile Include="gui\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="gui\log.cpp" />
+    <ClCompile Include="gui\notifications.cpp" />
+    <ClCompile Include="helper\eKeyboardMan.cpp" />
+    <ClCompile Include="minhook\src\buffer.c" />
+    <ClCompile Include="minhook\src\hde\hde32.c" />
+    <ClCompile Include="minhook\src\hde\hde64.c" />
+    <ClCompile Include="minhook\src\hook.c" />
+    <ClCompile Include="minhook\src\trampoline.c" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="plugin\Hooks.cpp" />
+    <ClCompile Include="plugin\Menu.cpp" />
+    <ClCompile Include="plugin\Settings.cpp" />
+    <ClCompile Include="umvc3\Camera.cpp" />
+    <ClCompile Include="umvc3\Matrix.cpp" />
+    <ClCompile Include="umvc3\Vector.cpp" />
+    <ClCompile Include="utils\addr.cpp" />
+    <ClCompile Include="utils\IniReader.cpp" />
     <ClCompile Include="utils\Patterns.cpp" />
   </ItemGroup>
   <ItemGroup>
