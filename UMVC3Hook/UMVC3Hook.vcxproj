@@ -190,6 +190,7 @@
     <ClInclude Include="plugin\Menu.h" />
     <ClInclude Include="plugin\Settings.h" />
     <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="umvc3\Camera.h" />
     <ClInclude Include="umvc3\Matrix.h" />
     <ClInclude Include="umvc3\Vector.h" />
